@@ -1,11 +1,11 @@
 {
-    "name": "velstack/mnotify",
-    "description": "Laravel SMS package for mNotify APIs",
+    "name": "velstack/sms",
+    "description": "API Documentation for Velstack",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Velstack\\Mnotify\\": "src/"
+            "Velstack\\SMS\\": "src/"
         }
     },
     "authors": [
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Velstack\\Mnotify\\MnotifyServiceProvider"
+                "Velstack\\SMS"
             ]
         }
     }
