@@ -71,14 +71,11 @@ All http responses are in json format that's every request to our endpoint must 
 }
 ```
 
- <p align="center">
- If you find anything that you think needs to be modified or addressed, send me a message on twitter
-</p>
+ 
 
 <p align="center">
-<a href="https://twitter.com/sammy_fort"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sammy_fort?label=@sammy_fort&style=social"></a>
-<a href="https://packagist.org/packages/velstack/mnotify"><img alt="Packagist Version (custom server)" src="https://img.shields.io/packagist/v/velstack/mnotify?label=Version"></a>
-<a href="https://packagist.org/packages/velstack/mnotify"><img src="https://img.shields.io/github/license/sammyfort/mNotify-laravel"></a>
+<a href="https://twitter.com/velstack"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/velstack?label=@velstack&style=social"></a>
+ <a href="https://packagist.org/packages/velstack/mnotify"><img src="https://img.shields.io/github/license/sammyfort/mNotify-laravel"></a>
 
 </p>
 
