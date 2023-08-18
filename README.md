@@ -13,22 +13,28 @@
 
 ## Introduction
 
+Welcome to the Velstack Developer Documentation
+where you’ll learn how to build amazing communication experiences with the Velstack API.
+
 Base url
 
 ```bash
   https://sms.velstack.com
 ```
 
-## Configuration
+## Get Started
 
 
-Run the command below to publish the `'/config/mnotify.php'` file.   
+Velstack APIs was made with REST and uses http verbs such as `GET, POST, PATCH/PUT, DELETE` Every request to our endpoints must be restful..
 
-```bash
-php artisan vendor:publish --tag=mnotify
-```
+ ## Authorization
 
-Then get your api keys from your [mNotify](https://www.mnotify.com/) client area and set these keys in your mnotify.php file
+Velstack uses API keys to authenticate requests. You can [login](https://www.sms.velstack.com/) to get your API key. Every request made to this endpoint requires API key to the server as a Header parameter:.
+
+## Responses
+
+All http responses are in json format that's every request to our endpoint must include a header of 'Accept:application/json'.
+
 
 ```php
 return  [
