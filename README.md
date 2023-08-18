@@ -40,42 +40,35 @@ All http responses are in json format that's every request to our endpoint must 
 
 ```bash
 
-  curl https://sms.velstack.com/messaging/quick/sms
+  curl https://sms.velstack.com/api/messaging/quick/sms
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
-  -d '{ "sender" : "Velstack", recipient: "020XXX9304", message: "First sms with velstack Apis" }'
+  -d '{ "sender" : "Velstack", recipient: "0205550368", message: "sent from the velstack api" }'
   -X POST
  
 ```
 
 #### `Response`
 ```json
-{
-    "status": "success",
-    "report": [
-        {
-            "_id": 60711577,
-            "recipient": "233249706365",
-            "message": "API messaging is fun!",
-            "sender": "mNotify",
-            "status": "DELIVERED",
-            "date_sent": "2018-03-08 10:19:35",
-            "campaign_id": "7FE4A62A-96EB-4755-BC57-000A38C8C6EF",
-            "retries": 0
-        },
-        {
-            "_id": 60711578,
-            "recipient": "233203698970",
-            "message": "API messaging is fun!",
-            "sender": "mNotify",
-            "status": "DELIVERED",
-            "date_sent": "2018-03-08 10:19:35",
-            "campaign_id": "7FE4A62A-96EB-4755-BC57-000A38C8C6EF",
-            "retries": 0
-        }
-    ]
+ {
+  "status": true,
+  "code": 200,
+  "message": "Message sent Successfully",
+  "data": {
+    "summary": {
+      "message_id": "550517f1-3810-4d17-bfdb-f2571d05c07c",
+      "type": "Quick SMS",
+      "message": "sent from the velstack api",
+      "sender": "VELSTACK",
+      "total_contacts": 1,
+      "recipients": [
+        "0205550368"
+      ],
+      "credit_used": 1,
+      "credit_left": "47.00"
+    }
+  }
 }
-
 ```
 
  <p align="center">
