@@ -38,24 +38,13 @@ All http responses are in json format that's every request to our endpoint must 
    
  
 
-```php
+```bash
 
-use App\Http\Controllers\Controller;
-use Velstack\Mnotify\Notifications\Notify;
- 
-
-class UserController extends  Controller{
-
- 
-  
-  public function deliveryStatus()
-  {
-    Notify::checkSMSDelivery("DD808719-2742-478A-85BE-2CF50E455FE8");
-    // remember when an sms is sent, an _id is returned in the response. Use that _id to check the delivery status.
-
-  }
-  
-}
+  curl https://sms.velstack.com/messaging/quick/sms
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ "sender" : "Velstack", recipient: "020XXX9304", message: "First sms with velstack Apis" }'
+  -X POST
  
 ```
 
