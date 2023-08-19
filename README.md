@@ -71,6 +71,23 @@ All http responses are in json format that's every request to our endpoint must 
 }
 ```
 #### `In case of error`
+```json
+{
+  "status": false,
+  "message": "Insufficient to complete this message",
+  "code": 403
+}
+```
+
+```json
+{
+  "status": false,
+  "message": "Service unavailable",
+  "code": 503
+}
+```
+
+
 
  
 
