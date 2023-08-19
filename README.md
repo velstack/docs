@@ -264,8 +264,153 @@ Delete group from account. To delete a group, append the group `id` to the url
 }
 ```
 
+# Contacts
+### Store Contact
+```bash
 
+  curl https://sms.velstack.com/api/messaging/contact
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ group_id : "a4a8da21-88f8-4395-a9df-f859f22c2dfa", first_name: "sammy", last_name: "fort",
+   phone_number: "0205550368", email_address: "example@example.com" }'
+  -X POST
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "New contact created successfully",
+  "data": {
+    "id": "84358395-f1c7-441c-ba69-7b74f30363e5",
+    "first_name": "sammy",
+    "last_name": "fort",
+    "phone_number": "0205550368",
+    "email_address": "example@example.com",
+    "Group": "V BANK",
+    "added_date": "2023-08-19T14:07:52.000000Z"
+  }
+}
+```
+### Get all contacts
+The endpoint will list all your contacts in every group.
 
+```bash
+
+  curl https://sms.velstack.com/api/messaging/contact
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -X GET
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Showing all contacts",
+  "data": [
+    {
+      "id": "2ca48c1e-9ea4-402b-8c69-f0da12692a74",
+      "first_name": "Sam",
+      "last_name": "Fort",
+      "phone_number": "0205550368",
+      "email_address": "sam@velstack.com",
+      "Group": "V BANK",
+      "added_date": "2023-08-19T12:41:14.000000Z"
+    },
+    {
+      "id": "84358395-f1c7-441c-ba69-7b74f30363e5",
+      "first_name": "michael",
+      "last_name": "kyeremeh",
+      "phone_number": "0248297302",
+      "email_address": "example@example.com",
+      "Group": "V BANK",
+      "added_date": "2023-08-19T14:07:52.000000Z"
+    }
+  ]
+}
+```
+
+### Get contacts in a Group
+Get all contacts in a particular group, you must append that group `id` the contact url like below
+
+```bash
+
+  curl https://sms.velstack.com/api/messaging/contact/a4a8da21-88f8-4395-a9df-f859f22c2dfa
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -X GET
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Showing contacts of V Bank",
+  "data": {
+    "results": [
+      {
+        "id": "2ca48c1e-9ea4-402b-8c69-f0da12692a74",
+        "first_name": "Sam",
+        "last_name": "Fort",
+        "phone_number": "0205550368",
+        "email_address": "sam@velstack.com",
+        "Group": "V BANK",
+        "added_date": "2023-08-19T12:41:14.000000Z"
+      },
+      {
+        "id": "84358395-f1c7-441c-ba69-7b74f30363e5",
+        "first_name": "michael",
+        "last_name": "kyeremeh",
+        "phone_number": "0248237302",
+        "email_address": "example@example.com",
+        "Group": "V BANK",
+        "added_date": "2023-08-19T14:07:52.000000Z"
+      }
+    ],
+    "contacts": null
+  }
+}
+```
+
+### Update Contact
+Update existing contact details
+```bash
+
+  curl https://sms.velstack.com/api/messaging/contact/84358395-f1c7-441c-ba69-7b74f30363e5
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{first_name: "perpetual", last_name: "obeng",
+   phone_number: "050XXXXXX", email_address: "example@example.com" }'
+  -X PUT
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Contact updated successfully",
+  "data": null
+}
+```
+
+### Update Contact
+```bash
+
+  curl https://sms.velstack.com/api/messaging/contact/84358395-f1c7-441c-ba69-7b74f30363e5
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -X DELETE
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Contact deleted successfully",
+  "data": null
+}
+```
 
 
 <p align="center">
