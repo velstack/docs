@@ -70,6 +70,7 @@ All http responses are in json format that's every request to our endpoint must 
   }
 }
 ```
+#### `In case of error`
 
  
 

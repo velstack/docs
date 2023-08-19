@@ -19,7 +19,7 @@
 
 
     "extra": {
-        "laravel": {
+        "plugin": {
             "providers": [
                 "Velstack\\SMS"
             ]
