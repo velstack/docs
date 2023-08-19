@@ -16,5 +16,5 @@ const data = {
        alert('Message sent successfully')
 
   }).catch((errors) => {
-      alert('Something went wrong')
+      alert(errors.response.data.message)
   })
