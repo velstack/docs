@@ -450,5 +450,5 @@ Register a new sender id
 
   
 <p align="center">
-  Sammy Fort ©2023. Powered by <a href="https://velstack.com/">Velstack</a>
+  <a href="https://velstack.com/">Velstack</a> Inc ©2023
 </p>
