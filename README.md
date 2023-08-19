@@ -35,8 +35,8 @@ Velstack uses API keys to authenticate requests. You can [login](https://www.sms
 
 All http responses are in json format that's every request to our endpoint must include a header of 'Accept:application/json'.
 
-   
- 
+
+## Quick SMS
 
 ```bash
 
@@ -87,6 +87,58 @@ All http responses are in json format that's every request to our endpoint must 
 }
 ```
 
+
+
+## Group SMS
+
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group/sms
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ "sender" : "Velstack", group_id: "a4a8da21-88f8-4395-a9df-f859f22c2dfa", message: "sent from the velstack api" }'
+  -X POST
+ 
+```
+
+#### `Response`
+```json
+ {
+  "status": true,
+  "code": 200,
+  "message": "Message sent Successfully",
+  "data": {
+    "summary": {
+      "message_id": "a2500c66-5d60-4f5a-8503-2105151afdca",
+      "type": "Group SMS",
+      "message": "group sms sent from the velstack api",
+      "sender": "VELSTACK",
+      "total_contacts": 1,
+      "recipients": [
+        "0205550368"
+      ],
+      "credit_used": 1,
+      "credit_left": 1
+    }
+  }
+}
+```
+#### `In case of error`
+```json
+{
+  "status": false,
+  "message": "Insufficient to complete this message",
+  "code": 403
+}
+```
+
+```json
+{
+  "status": false,
+  "message": "Service unavailable",
+  "code": 503
+}
+```
 
 
  
