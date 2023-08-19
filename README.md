@@ -140,8 +140,133 @@ All http responses are in json format that's every request to our endpoint must 
 }
 ```
 
+## Groups
 
+### Get all groups
+See all groups you have with your account
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -X GET
  
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Showing all groups",
+  "data": {
+    "Summary": [
+      {
+        "id": "a4a8da21-88f8-4395-a9df-f859f22c2dfa",
+        "name": "V BANK",
+        "members": 1
+      },
+      {
+        "id": "1298d77e-fa98-4304-b513-e4e190a46e28",
+        "name": "My Group",
+        "members": 0
+      }
+    ],
+    "collection": null
+  }
+}
+```
+
+### Get a Group
+Get a specific group. To get a specific group, append the group `id` to the url like below
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ group_name : "My Group"}'
+  -X GET
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Showing a single group",
+  "data": [
+    {
+      "id": "d565d047-df83-4b33-a498-f9de2aca50e6",
+      "name": "My Group",
+      "members": 0
+    }
+  ]
+}
+```
+
+### Create Group
+Create a new group in your account
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ group_name : "My Group"}'
+  -X POST
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Group created successfully",
+  "data": {
+    "id": "d565d047-df83-4b33-a498-f9de2aca50e6",
+    "name": "My Group",
+    "members": 0
+  }
+}
+```
+
+### Update Group
+Update an existing group in your account
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -d '{ group_new_name : "Man City Supporters"}'
+  -X PUT
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Group updated to Man City Supporters",
+  "data": null
+}
+```
+
+### Delete Group
+Delete group from account. To delete a group, append the group `id` to the url
+```bash
+
+  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+  -X DELETE
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Group deleted successfully",
+  "data": null
+}
+```
+
+
+
+
 
 <p align="center">
 <a href="https://twitter.com/velstack"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/velstack?label=@velstack&style=social"></a>
