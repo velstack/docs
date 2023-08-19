@@ -394,7 +394,7 @@ Update existing contact details
 }
 ```
 
-### Update Contact
+### Delete Contact
 ```bash
 
   curl https://sms.velstack.com/api/messaging/contact/84358395-f1c7-441c-ba69-7b74f30363e5
@@ -411,6 +411,34 @@ Update existing contact details
   "data": null
 }
 ```
+
+# Sender Id
+Register a new sender id
+```bash
+
+  curl https://sms.velstack.com/api/messaging/sender/id
+  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Accept: application/json"
+ -d '{purpose: "Software Business", sender_id: "VELSTACK" }'
+  -X POST
+ 
+```
+ ```json
+{
+  "status": true,
+  "code": 200,
+  "message": "Id registered successfully",
+  "data": [
+    {
+      "id": "VELSTACK",
+      "purpose": "Software Business",
+      "status": "pending",
+      "date": "2023-08-19T14:49:03.000000Z"
+    }
+  ]
+}
+```
+
 
 
 <p align="center">
