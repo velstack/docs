@@ -1,8 +1,8 @@
 <p align="center"><a href="https://mnotify.com" target="_blank"><img src="https://sms.velstack.com/build/images/velstack/logo-white.png" width="200" alt="Laravel Logo"></a></p>
 
 <p align="center">
- <a href=" "><img alt="Packagist Version (custom server)" src="https://img.shields.io/packagist/v/velstack/mnotify?label=Version"></a>
-<a href=""> <img src="https://img.shields.io/github/license/velstack/docs"></a>
+ <a href=" "><img alt="Packagist Version (custom server)" src="https://img.shields.io/github/package-json/v/velstack/docs/main"></a>
+ <a href=""><img src="https://img.shields.io/github/license/velstack/docs"></a>
 
  
 
@@ -443,7 +443,7 @@ Register a new sender id
 
 <p align="center">
 <a href="https://twitter.com/velstack"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/velstack?label=@velstack&style=social"></a>
- <a href="https://packagist.org/packages/velstack/mnotify"><img src="https://img.shields.io/github/license/sammyfort/mNotify-laravel"></a>
+  <a href=""><img src="https://img.shields.io/github/license/velstack/docs"></a>
 
 </p>
 
