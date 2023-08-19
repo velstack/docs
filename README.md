@@ -1,8 +1,8 @@
 <p align="center"><a href="https://mnotify.com" target="_blank"><img src="https://sms.velstack.com/build/images/velstack/logo-white.png" width="200" alt="Laravel Logo"></a></p>
 
 <p align="center">
- <a href="https://packagist.org/packages/velstack/mnotify"><img alt="Packagist Version (custom server)" src="https://img.shields.io/packagist/v/velstack/mnotify?label=Version"></a>
-<a href="https://packagist.org/packages/velstack/mnotify"><img src="https://img.shields.io/github/license/sammyfort/mNotify-laravel"></a>
+ <a href=" "><img alt="Packagist Version (custom server)" src="https://img.shields.io/packagist/v/velstack/mnotify?label=Version"></a>
+<a href=""> <img src="https://img.shields.io/github/license/velstack/docs"></a>
 
  
 
@@ -74,7 +74,7 @@ All http responses are in json format that's every request to our endpoint must 
 ```json
 {
   "status": false,
-  "message": "Insufficient to complete this message",
+  "message": "Insufficient balance to complete this message",
   "code": 403
 }
 ```
@@ -127,7 +127,7 @@ All http responses are in json format that's every request to our endpoint must 
 ```json
 {
   "status": false,
-  "message": "Insufficient to complete this message",
+  "message": "Insufficient balance to complete this message",
   "code": 403
 }
 ```

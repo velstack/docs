@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "name": "velstack",
+    "version": "1.0.1",
+    "author": "sammy fort",
+    "scripts": {
+
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.10.2",
+        "axios": "^0.21",
+        "browser-sync": "^2.27.7"
+    }
+
+}
