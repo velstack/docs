@@ -43,7 +43,7 @@ All http responses are in json format that's every request to our endpoint must 
   curl https://sms.velstack.com/api/messaging/quick/sms
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
-  -d '{ "sender" : "Velstack", recipient: "0205550368", message: "sent from the velstack api" }'
+  -d '{ sender : "Velstack", recipient: "0205550368", message: "sent from the velstack api" }'
   -X POST
  
 ```
@@ -96,7 +96,7 @@ All http responses are in json format that's every request to our endpoint must 
   curl https://sms.velstack.com/api/messaging/group/sms
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
-  -d '{ "sender" : "Velstack", group_id: "a4a8da21-88f8-4395-a9df-f859f22c2dfa", message: "sent from the velstack api" }'
+  -d '{ sender : "Velstack", group_id: "a4a8da21-88f8-4395-a9df-f859f22c2dfa", message: "sent from the velstack api" }'
   -X POST
  
 ```
