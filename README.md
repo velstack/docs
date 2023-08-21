@@ -40,7 +40,7 @@ All http responses are in json format that's every request to our endpoint must 
 
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/quick/sms
+  curl https://sms.velstack.com/api/quick/sms
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ sender : "Velstack", recipient: "0205550368", message: "sent from the velstack api" }'
@@ -93,7 +93,7 @@ All http responses are in json format that's every request to our endpoint must 
 
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group/sms
+  curl https://sms.velstack.com/api/group/sms
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ sender : "Velstack", group_id: "a4a8da21-88f8-4395-a9df-f859f22c2dfa", message: "sent from the velstack api" }'
@@ -146,7 +146,7 @@ All http responses are in json format that's every request to our endpoint must 
 See all groups you have with your account
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group
+  curl https://sms.velstack.com/api/group
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -X GET
@@ -179,7 +179,7 @@ See all groups you have with your account
 Get a specific group. To get a specific group, append the group `id` to the url like below
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  curl https://sms.velstack.com/api/group/d565d047-df83-4b33-a498-f9de2aca50e6
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ group_name : "My Group"}'
@@ -205,7 +205,7 @@ Get a specific group. To get a specific group, append the group `id` to the url 
 Create a new group in your account
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group
+  curl https://sms.velstack.com/api/group
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ group_name : "My Group"}'
@@ -229,7 +229,7 @@ Create a new group in your account
 Update an existing group in your account
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  curl https://sms.velstack.com/api/group/d565d047-df83-4b33-a498-f9de2aca50e6
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ group_new_name : "Man City Supporters"}'
@@ -249,7 +249,7 @@ Update an existing group in your account
 Delete group from account. To delete a group, append the group `id` to the url
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/group/d565d047-df83-4b33-a498-f9de2aca50e6
+  curl https://sms.velstack.com/api/group/d565d047-df83-4b33-a498-f9de2aca50e6
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -X DELETE
@@ -268,7 +268,7 @@ Delete group from account. To delete a group, append the group `id` to the url
 ### Store Contact
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/contact
+  curl https://sms.velstack.com/api/contact
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{ group_id : "a4a8da21-88f8-4395-a9df-f859f22c2dfa", first_name: "sammy", last_name: "fort",
@@ -297,7 +297,7 @@ The endpoint will list all your contacts in every group.
 
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/contact
+  curl https://sms.velstack.com/api/contact
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -X GET
@@ -336,7 +336,7 @@ Get all contacts in a particular group, you must append that group `id` the cont
 
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/contact/a4a8da21-88f8-4395-a9df-f859f22c2dfa
+  curl https://sms.velstack.com/api/contact/a4a8da21-88f8-4395-a9df-f859f22c2dfa
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -X GET
@@ -377,7 +377,7 @@ Get all contacts in a particular group, you must append that group `id` the cont
 Update existing contact details
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/contact/84358395-f1c7-441c-ba69-7b74f30363e5
+  curl https://sms.velstack.com/api/contact/84358395-f1c7-441c-ba69-7b74f30363e5
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -d '{first_name: "perpetual", last_name: "obeng",
@@ -397,7 +397,7 @@ Update existing contact details
 ### Delete Contact
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/contact/84358395-f1c7-441c-ba69-7b74f30363e5
+  curl https://sms.velstack.com/api/contact/84358395-f1c7-441c-ba69-7b74f30363e5
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
   -X DELETE
@@ -416,7 +416,7 @@ Update existing contact details
 Register a new sender id
 ```bash
 
-  curl https://sms.velstack.com/api/messaging/sender/id
+  curl https://sms.velstack.com/api/sender/id
   -H "Authorization: Bearer YOUR_API_KEY"
   -H "Accept: application/json"
  -d '{purpose: "Software Business", sender_id: "VELSTACK" }'

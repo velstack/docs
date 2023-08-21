@@ -2,7 +2,7 @@
 
 
 
-$url = "https://sms.velstack.com/api/messaging/contact";
+$url = "https://sms.velstack.com/api/contact";
 
   $data = [
       "group_id" => "62469a27-2a25-4e22-b324-bce482d54a26",
