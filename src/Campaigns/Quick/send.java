@@ -1,7 +1,7 @@
 
 
 AsyncHttpClient client = new DefaultAsyncHttpClient();
- client.prepare("POST", "https://sms.velstack.com/api/messaging/quick/sms")
+ client.prepare("POST", "https://sms.velstack.com/api/quick/sms")
   .setHeader("accept", "application/json")
   .setHeader("Authorization", "Bearer API_KEY")
   .setBody("title", "Information")

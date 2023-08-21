@@ -1,7 +1,7 @@
   import requests
   import json
 
-  url = "https://sms.velstack.com/api/messaging/contact"
+  url = "https://sms.velstack.com/api/contact"
 
   headers = {
         "Content-Type": "application/json",

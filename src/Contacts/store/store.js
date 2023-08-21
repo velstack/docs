@@ -8,7 +8,7 @@ const data = {
     "email_address" : "example@example.com"
 }
 
-axios.post('https://sms.velstack.com/api/messaging/contact', data, {
+axios.post('https://sms.velstack.com/api/contact', data, {
     headers: {
         Authorization: "Bearer " + "API_KEY",
         Accept: "application/json",

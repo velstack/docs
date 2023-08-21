@@ -7,7 +7,7 @@ const data = {
     message: 'First API message from Velstack'
 }
 
- axios.post('https://sms.velstack.com/api/messaging/quick/sms', data, {
+ axios.post('https://sms.velstack.com/api/quick/sms', data, {
     headers: {
         Authorization: "Bearer " + "API_KEY",
         Accept: "application/json",

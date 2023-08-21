@@ -10,7 +10,7 @@ const params = JSON.stringify({
 const options = {
     hostname: 'sms.velstack.com',
     port: 443,
-    path: '/api/messaging/quick/sms',
+    path: '/api/quick/sms',
     method: 'POST',
     headers: {
         Authorization: 'Bearer API_KEY',

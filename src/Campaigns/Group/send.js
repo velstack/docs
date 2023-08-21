@@ -7,7 +7,7 @@ const data = {
     message: 'First API message from Velstack'
 }
 
-axios.post('https://sms.velstack.com/api/messaging/group/sms', data, {
+axios.post('https://sms.velstack.com/api/group/sms', data, {
     headers: {
         Authorization: "Bearer " + "API_KEY",
         Accept: "application/json",

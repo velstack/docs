@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://sms.velstack.com/api/messaging/quick/sms";
+$url = "https://sms.velstack.com/api/quick/sms";
 $data = [
     'title' => 'Information',
     'sender' => "Velstack",
